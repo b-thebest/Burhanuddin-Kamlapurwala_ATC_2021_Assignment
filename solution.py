@@ -93,7 +93,7 @@ def solver(function, n, *argv):
     for values in argv:
         var_values.append(int(values))
     
-    #function = simplify(function)
+    function = simplify(function)
     print("Making automaton for following Simplified formula --- ", function, "\n\n")
     variables = ["x"+str(i) for i in range(1,n+1)]
  
@@ -235,7 +235,8 @@ f1 = And(2*x1+x2==4, x1<=2, x2<=1)
 f2 = 2*x1+x2==4
 f3 = Not(x1+x2<=5)
 f4 = x1<=2
-f5 = x1+x2>5
+f5 = x1+x2<5
+print(simplify(f5))
 solver(f3, 2, 1, 1)
 solver(f5, 2, 1, 1)
 
