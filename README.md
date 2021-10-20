@@ -1,13 +1,26 @@
 # Burhanuddin-Kamlapurwala_ATC_2021_Assignment
 This repository is created to submit the assignment of presburger logic
 
+**Prerequisites**
+
+Python >= 3.5
+
+**Requirements**
+```
+pip3 install z3solver
+pip3 install prettytable
+```
 Input to the program is a Presburger logic formula f , the number of
 variables n in f , and n decimal values. Variable names will be x1,x2,...,xn.
 
 Output will be automata after each inductive step
 
+**Test**
+To check some basic test cases, run test.py using following command
+``` python3 test.py ```
+
 Key things to remember:-
-- value of n should be equal to number of values in function.
+- value of n should be equal to number of variables and decimal values.
 - Decimal values can not be in float 
 - There should be no space in between one function.
 - Function should be in simplified format. Inputs like x1+x2-3<=5+2 should not be used.
@@ -37,3 +50,4 @@ solver(f3, 2, 1, 1)
 solver(f4, 1, 1)
 solver(f5, 2, 1, 1)
 ```
+

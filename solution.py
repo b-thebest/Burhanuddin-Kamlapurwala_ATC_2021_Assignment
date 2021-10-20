@@ -254,12 +254,13 @@ def checkInput(function, n, inputs, variables):
 #main solver function
 def solver(function, n, *argv):
     print("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=")
+    print("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=")
     var_values = []
     for values in argv:
         var_values.append(int(values))
     
     #function = simplify(function)
-    print("Making automaton for following Simplified formula --- ", function, "\n")
+    print("Automaton for given formula --- ", function, "\n")
     variables = ["x"+str(i) for i in range(1,n+1)]
  
     DFAs = []
@@ -275,6 +276,7 @@ def solver(function, n, *argv):
     input_accept = checkInput(function, n, var_values, variables)
     print(function, ":", " ".join(variables[i]+'='+str(var_values[i]) for i in range(n)), " is ", input_accept)
     print("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=")
+    print("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=\n")
     
 '''x1, x2, x3 = Ints('x1 x2 x3')
 f1 = And(x1+x2<=5, x1<=2)

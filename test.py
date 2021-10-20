@@ -17,4 +17,7 @@ f5 = x1+x2<=5
 f6 = And(Not(x1 + x2 <= 2), x2 <= 1)
 f7 = And(2*x1+x2==4, x1<=2)
 
-solution.solver(f2, 2, 2, 0)
+functions_to_check = [f1, f2, f3, f4, f5, f6, f7]
+
+for f in functions_to_check:
+    solution.solver(f, 2, 2, 0)
